@@ -6,9 +6,10 @@
     mysqli_select_db($con, 'easyrecharge');
 
     $name = $_POST['name'];
-    $num = $_POST['number'];
+    $num = $_POST['num'];
     $operator = $_POST['operator'];
     $circle = $_POST['circle'];
 
-    $reg = mysqli_query($con," insert into recharge (name, num, operator, circle) values ('$name','$number','$operator','$circle')");
+    $reg = mysqli_query($con,"INSERT INTO recharge (name) SELECT name FROM registration");
+    $update = mysqli_query($con,"UPDATE recharge set number='$num' where name = '$name'");
 ?>

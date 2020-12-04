@@ -344,218 +344,216 @@
                                         </li>
                                     </ul>
                                 </div>
-
-                                <form method="POST" role="form">
-                                    <div class="tab-content">
-                                        <div class="tab-pane active" role="tabpanel" id="step1">
-                                            <div class="mobile-grids">
-                                                <div class="mobile-left text-center">
-                                                    <img src="images/mobile.png" alt>
-                                                </div>
-                                                <div class="mobile-right">
-                                                    <h4>Enter your mobile number</h4>
-                                                    <label>+91</label><input name="num" type="text" class="mobile-text" value onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '';}" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
-                                                </div>
-
+                                <div class="tab-content">
+                                    <div class="tab-pane active" role="tabpanel" id="step1">
+                                        <div class="mobile-grids">
+                                            <div class="mobile-left text-center">
+                                                <img src="images/mobile.png" alt>
                                             </div>
-                                            <ul class="list-inline pull-right">
-                                                <li><button type="button"
-                                                        class="mob-btn btn btn-primary next-step">Next</button></li>
-                                            </ul>
+                                            <form method="POST" action="recharge.php">
+                                            <div class="mobile-right"> 
+                                                <h4>Enter your mobile number</h4>
+                                                <label>+91</label>
+                                                <input name="num" type="text" class="mobile-text" value onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '';}" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+                                            </div>
+
                                         </div>
-                                        <div class="tab-pane" role="tabpanel" id="step2">
-                                            <div class="mobile-grids">
-                                                <div class="mobile-left text-center">
-                                                    <img src="images/mobile.png" alt>
-                                                </div>
-                                                <div class="mobile-right ">
-                                                    <h4>Prepaid or Postpaid?</h4>
-                                                    <div class="radio-btns">
-                                                        <div class="swit">
-                                                            <div class="check_box">
-                                                                <img src="images/card.png" alt>
-                                                                <div class="clearfix"></div>
-                                                                <div class="radio">
-                                                                    <label>
-                                                                        <input type="radio" name="radio"
-                                                                            checked><i></i>Prepaid
-                                                                    </label>
-                                                                </div>
+                                        <ul class="list-inline pull-right">
+                                            <li><button type="submit" class="mob-btn btn btn-primary next-step">Next</button></li>
+                                        </ul>
+                                        </form>
+                                    </div>
+                                    <div class="tab-pane" role="tabpanel" id="step2">
+                                        <div class="mobile-grids">
+                                            <div class="mobile-left text-center">
+                                                <img src="images/mobile.png" alt>
+                                            </div>
+                                            <div class="mobile-right ">
+                                                <h4>Prepaid or Postpaid?</h4>
+                                                <div class="radio-btns">
+                                                    <div class="swit">
+                                                        <div class="check_box">
+                                                            <img src="images/card.png" alt>
+                                                            <div class="clearfix"></div>
+                                                            <div class="radio">
+                                                                <label>
+                                                                    <input type="radio" name="radio"
+                                                                        checked><i></i>Prepaid
+                                                                </label>
                                                             </div>
-                                                            <div class="check_box">
-                                                                <img src="images/card.png" alt>
-                                                                <div class="clearfix"></div>
-                                                                <div class="radio">
-                                                                    <label>
-                                                                        <input type="radio" name="radio"><i></i>Postpaid
-                                                                    </label>
-                                                                </div>
+                                                        </div>
+                                                        <div class="check_box">
+                                                            <img src="images/card.png" alt>
+                                                            <div class="clearfix"></div>
+                                                            <div class="radio">
+                                                                <label>
+                                                                    <input type="radio" name="radio"><i></i>Postpaid
+                                                                </label>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
-
                                             </div>
-                                            <ul class="list-inline pull-right">
-                                                <li><button type="button"
-                                                        class="mob-btn btn btn-default prev-step">Previous</button></li>
-                                                <li><button type="button"
-                                                        class="mob-btn btn btn-primary next-step">Next</button></li>
-                                            </ul>
+
                                         </div>
-                                        <div class="tab-pane" role="tabpanel" id="step3">
-                                            <div class="mobile-grids">
-                                                <div class="mobile-left text-center">
-                                                    <img src="images/mobile.png" alt>
-                                                </div>
-                                                <div class="mobile-right ">
-                                                    <h4>Which operator?</h4>
-                                                    <ul class="rchge-icons">
-                                                        <li><a href="#">Airtel</a></li>
-                                                        <li><a href="#">Vi</a></li>
-                                                        <li><a href="#">BSNL</a></li>
-                                                        <li><a href="#">Jio</a></li>
-                                                    </ul>
-                                                    <div class="section_room">
-                                                        <select name="operator" id="country" onchange="change_country(this.value)"
-                                                            class="frm-field required">
-                                                            <option value="null">Airtel</option>
-                                                            <option value="null">Vi</option>
-                                                            <option value="AX">Bsnl</option>
-                                                            <option value="AX">Jio</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-
-                                            </div>
-                                            <ul class="list-inline pull-right">
-                                                <li><button type="button"
-                                                        class="mob-btn btn btn-default prev-step">Previous</button></li>
-                                                <li><button type="button"
-                                                        class="mob-btn btn btn-primary btn-info-full next-step">Next</button>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="tab-pane" role="tabpanel" id="step4">
-                                            <div class="mobile-grids">
-                                                <div class="mobile-left text-center">
-                                                    <img src="images/mobile.png" alt>
-                                                </div>
-                                                <div class="mobile-right ">
-                                                    <h4>Which Circle?</h4>
-                                                    <div class="map-image">
-                                                        <img src="images/map.png" alt>
-                                                    </div>
-                                                    <div class="section_room">
-                                                        <select name="circle" id="country" onchange="change_country(this.value)"
-                                                            class="frm-field required">
-                                                            <option value="null">Andaman and Nicobar</option>
-							
-                                                            <option value="null">Andhra Pradesh</option>
-
-                                                            <option value="AX">Arunachal Pradesh</option>
-
-                                                            <option value="AX">Assam</option>
-
-                                                            <option value="AX">Bihar</option>
-
-                                                            <option value="AX">Chandigarh</option>
-
-                                                            <option value="AX">Chhattisgarh</option>
-
-                                                            <option value="AX">Daman and Diu</option>
-
-                                                            <option value="AX">Dadra and Nagar Haveli</option>
-
-                                                            <option value="AX">Delhi</option>
-                                                            
-                                                            <option value="AX">Goa</option>
-
-                                                            <option value="AX">Gujarat</option>
-
-                                                            <option value="AX">Haryana</option>
-
-                                                            <option value="AX">Himachal Pradesh</option>
-
-                                                            <option value="AX">Jammu and Kashmir</option>
-
-                                                            <option value="AX">Jharkhand</option>
-
-                                                            <option value="AX">Karnataka</option>
-
-                                                            <option value="AX">Kerala</option>
-
-                                                            <option value="AX">Lakshadweep</option>
-
-                                                            <option value="AX">Madhya Pradesh</option>
-
-                                                            <option value="AX">Maharashtra</option>
-
-                                                            <option value="AX">Manipur</option>
-
-                                                            <option value="AX">Meghalaya</option>
-
-                                                            <option value="AX">Mizoram</option>
-
-                                                            <option value="AX">Nagaland</option>
-
-                                                            <option value="AX">Orissa</option>
-
-                                                            <option value="AX">Pondicherry</option>
-                                                            
-                                                            <option value="AX">Punjab</option>
-
-                                                            <option value="AX">Rajasthan</option>
-
-                                                            <option value="AX">Sikkim</option>
-
-                                                            <option value="AX">Tamil Nadu</option>
-
-                                                            <option value="AX">Telangana</option>
-
-                                                            <option value="AX">Tripura</option>
-
-                                                            <option value="AX">Uttarakhand</option>
-
-                                                            <option value="AX">Uttar Pradesh</option>
-                                                            
-                                                            <option value="AX">West Bengal</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-
-                                            </div>
-                                            <ul class="list-inline pull-right">
-                                                <li><button type="button"
-                                                        class="mob-btn btn btn-default prev-step">Previous</button></li>
-                                                <li><button type="button"
-                                                        class="mob-btn btn btn-primary btn-info-full next-step">Next</button>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="tab-pane" role="tabpanel" id="step5">
-                                            <div class="mobile-grids">
-                                                <div class="mobile-left text-center">
-                                                    <img src="images/mobile.png" alt>
-                                                </div>
-                                                <div class="mobile-right">
-                                                    <div class="mobile-rchge">
-                                                        <a href="plans.html">VIEW PLANS</a>
-                                                    </div>
-                                                    <div class="clearfix"></div>
-                                                </div>
-                                            </div>
-                                            <ul class="list-inline pull-right">
-                                                <li><input type="submit" value="SIGNIN"></li>
-                                                <li><button type="button"
-                                                        class="mob-btn btn btn-default prev-step">Previous</button></li>
-                                                <li><button type="button" class="mob-btn btn btn-primary btn-info-full"
-                                                        data-dismiss="modal">Cancel</button></li>
-                                            </ul>
-                                        </div>
-                                        <div class="clearfix"></div>
+                                        <ul class="list-inline pull-right">
+                                            <li><button type="button"
+                                                    class="mob-btn btn btn-default prev-step">Previous</button></li>
+                                            <li><button type="button"
+                                                    class="mob-btn btn btn-primary next-step">Next</button></li>
+                                        </ul>
                                     </div>
-                                </form>
+                                    <div class="tab-pane" role="tabpanel" id="step3">
+                                        <div class="mobile-grids">
+                                            <div class="mobile-left text-center">
+                                                <img src="images/mobile.png" alt>
+                                            </div>
+                                            <div class="mobile-right ">
+                                                <h4>Which operator?</h4>
+                                                <ul class="rchge-icons">
+                                                    <li><a href="#">Airtel</a></li>
+                                                    <li><a href="#">Vi</a></li>
+                                                    <li><a href="#">BSNL</a></li>
+                                                    <li><a href="#">Jio</a></li>
+                                                </ul>
+                                                <div class="section_room">
+                                                    <select name="operator" id="country" onchange="change_country(this.value)"
+                                                        class="frm-field required">
+                                                        <option value="null">Airtel</option>
+                                                        <option value="null">Vi</option>
+                                                        <option value="AX">Bsnl</option>
+                                                        <option value="AX">Jio</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <ul class="list-inline pull-right">
+                                            <li><button type="button"
+                                                    class="mob-btn btn btn-default prev-step">Previous</button></li>
+                                            <li><button type="button"
+                                                    class="mob-btn btn btn-primary btn-info-full next-step">Next</button>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="tab-pane" role="tabpanel" id="step4">
+                                        <div class="mobile-grids">
+                                            <div class="mobile-left text-center">
+                                                <img src="images/mobile.png" alt>
+                                            </div>
+                                            <div class="mobile-right ">
+                                                <h4>Which Circle?</h4>
+                                                <div class="map-image">
+                                                    <img src="images/map.png" alt>
+                                                </div>
+                                                <div class="section_room">
+                                                    <select name="circle" id="country" onchange="change_country(this.value)"
+                                                        class="frm-field required">
+                                                        <option value="null">Andaman and Nicobar</option>
+                        
+                                                        <option value="null">Andhra Pradesh</option>
+
+                                                        <option value="AX">Arunachal Pradesh</option>
+
+                                                        <option value="AX">Assam</option>
+
+                                                        <option value="AX">Bihar</option>
+
+                                                        <option value="AX">Chandigarh</option>
+
+                                                        <option value="AX">Chhattisgarh</option>
+
+                                                        <option value="AX">Daman and Diu</option>
+
+                                                        <option value="AX">Dadra and Nagar Haveli</option>
+
+                                                        <option value="AX">Delhi</option>
+                                                        
+                                                        <option value="AX">Goa</option>
+
+                                                        <option value="AX">Gujarat</option>
+
+                                                        <option value="AX">Haryana</option>
+
+                                                        <option value="AX">Himachal Pradesh</option>
+
+                                                        <option value="AX">Jammu and Kashmir</option>
+
+                                                        <option value="AX">Jharkhand</option>
+
+                                                        <option value="AX">Karnataka</option>
+
+                                                        <option value="AX">Kerala</option>
+
+                                                        <option value="AX">Lakshadweep</option>
+
+                                                        <option value="AX">Madhya Pradesh</option>
+
+                                                        <option value="AX">Maharashtra</option>
+
+                                                        <option value="AX">Manipur</option>
+
+                                                        <option value="AX">Meghalaya</option>
+
+                                                        <option value="AX">Mizoram</option>
+
+                                                        <option value="AX">Nagaland</option>
+
+                                                        <option value="AX">Orissa</option>
+
+                                                        <option value="AX">Pondicherry</option>
+                                                        
+                                                        <option value="AX">Punjab</option>
+
+                                                        <option value="AX">Rajasthan</option>
+
+                                                        <option value="AX">Sikkim</option>
+
+                                                        <option value="AX">Tamil Nadu</option>
+
+                                                        <option value="AX">Telangana</option>
+
+                                                        <option value="AX">Tripura</option>
+
+                                                        <option value="AX">Uttarakhand</option>
+
+                                                        <option value="AX">Uttar Pradesh</option>
+                                                        
+                                                        <option value="AX">West Bengal</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <ul class="list-inline pull-right">
+                                            <li><button type="button"
+                                                    class="mob-btn btn btn-default prev-step">Previous</button></li>
+                                            <li><button type="button"
+                                                    class="mob-btn btn btn-primary btn-info-full next-step">Next</button>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="tab-pane" role="tabpanel" id="step5">
+                                        <div class="mobile-grids">
+                                            <div class="mobile-left text-center">
+                                                <img src="images/mobile.png" alt>
+                                            </div>
+                                            <div class="mobile-right">
+                                                <div class="mobile-rchge">
+                                                    <a href="plans.html">VIEW PLANS</a>
+                                                </div>
+                                                <div class="clearfix"></div>
+                                            </div>
+                                        </div>
+                                        <ul class="list-inline pull-right">
+                                            <li><button type="button"
+                                                    class="mob-btn btn btn-default prev-step">Previous</button></li>
+                                            <li><button type="button" class="mob-btn btn btn-primary btn-info-full"
+                                                    data-dismiss="modal">Cancel</button></li>
+                                        </ul>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
                             </div>
                         </section>
                     </div>
