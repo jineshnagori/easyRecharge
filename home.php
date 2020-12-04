@@ -134,7 +134,7 @@
                 </div>
                 <div class="top-nav">
                     <span class="menu"><img src="images/menu.png" alt=" "></span>
-                    <ul class="nav1">
+                    <ul class="nav1" style="text-align: right;">
                         <li><a href="#" data-toggle="modal" data-target="#myModal">Mobile</a></li>
                         <li><a href="logout.php">logout</a></li>
                     </ul>
