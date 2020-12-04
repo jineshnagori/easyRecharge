@@ -4,7 +4,10 @@ session_start();
 if (!isset($_SESSION['username'])) {
     header('location: ../adminlogin.html');
  }
-
+ $mysqli = new mysqli("localhost", "root", "", "easyrecharge"); 
+ $sql = "SELECT * FROM recharge"; 
+ $result = $mysqli->query($sql); 
+$mysqli->close();
 ?>
 <!DOCTYPE html>
 <html>
@@ -73,54 +76,6 @@ if (!isset($_SESSION['username'])) {
 </head>
 
 <body>
-    <script>
-        (function () {
-            if (typeof _bsa !== 'undefined' && _bsa) {
-                // format, zoneKey, segment:value, options
-                _bsa.init('flexbar', 'CKYI627U', 'placement:w3layoutscom');
-            }
-        })();
-    </script>
-    <script>
-        (function () {
-            if (typeof _bsa !== 'undefined' && _bsa) {
-                // format, zoneKey, segment:value, options
-                _bsa.init('fancybar', 'CKYDL2JN', 'placement:demo');
-            }
-        })();
-    </script>
-    <script>
-        (function () {
-            if (typeof _bsa !== 'undefined' && _bsa) {
-                // format, zoneKey, segment:value, options
-                _bsa.init('stickybox', 'CKYI653J', 'placement:w3layoutscom');
-            }
-        })();
-    </script>
-    <!--<script>(function(v,d,o,ai){ai=d.createElement("script");ai.defer=true;ai.async=true;ai.src=v.location.protocol+o;d.head.appendChild(ai);})(window, document, "//a.vdo.ai/core/w3layouts_V2/vdo.ai.js?vdo=34");</script>-->
-    <div id="codefund">
-        <!-- fallback content -->
-    </div>
-    <script src="https://codefund.io/properties/441/funder.js" async="async"></script>
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-149859901-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'UA-149859901-1');
-    </script>
-
-    <script>
-        window.ga = window.ga || function () { (ga.q = ga.q || []).push(arguments) }; ga.l = +new Date;
-        ga('create', 'UA-149859901-1', 'demo.w3layouts.com');
-        ga('require', 'eventTracker');
-        ga('require', 'outboundLinkTracker');
-        ga('require', 'urlChangeTracker');
-        ga('send', 'pageview');
-    </script>
     <script async src="/js/autotrack.js"></script>
 
     <meta name="robots" content="noindex">
@@ -148,24 +103,6 @@ if (!isset($_SESSION['username'])) {
                     </script>
                     <!-- /script-for-menu -->
                 </div>
-                <!-- start search-->
-                <!-- <div class="search-box">
-					    <div id="sb-search" class="sb-search">
-							<form>
-								<input class="sb-search-input" placeholder="Enter your search item..." type="search" name="search" id="search">
-								<input class="sb-search-submit" type="submit" value>
-								<span class="sb-icon-search"> </span>
-							</form>
-						</div>
-				    </div>
-					
-					<script src="js/classie.js"></script>
-					<script src="js/uisearch.js"></script>
-						<script>
-							new UISearch( document.getElementById( 'sb-search' ) );
-						</script> -->
-
-
                 <div class="clearfix"> </div>
             </div>
             <div class="container">
@@ -186,57 +123,32 @@ if (!isset($_SESSION['username'])) {
 
         <div class="table-responsive">
         <table class="table">
-            <thead>
+            <thead> 
             <tr>
-                <th scope="col">#</th>
-                <th scope="col">Heading</th>
-                <th scope="col">Heading</th>
-                <th scope="col">Heading</th>
-                <th scope="col">Heading</th>
-                <th scope="col">Heading</th>
-                <th scope="col">Heading</th>
-                <th scope="col">Heading</th>
-                <th scope="col">Heading</th>
-                <th scope="col">Heading</th>
+                <th scope="col">id</th>
+                <th scope="col">Name</th>
+                <th scope="col">Mobile Number</th>
+                <th scope="col">Operator</th>
+                <th scope="col">Circler</th>
+                <th scope="col">Plan</th>
             </tr>
             </thead>
             <tbody>
+            <?php   // LOOP TILL END OF DATA  
+                while($rows=$result->fetch_assoc()) 
+                { 
+            ?>
             <tr>
-                <th scope="row">1</th>
-                <td>Cell</td>
-                <td>Cell</td>
-                <td>Cell</td>
-                <td>Cell</td>
-                <td>Cell</td>
-                <td>Cell</td>
-                <td>Cell</td>
-                <td>Cell</td>
-                <td>Cell</td>
+                <td><?php echo $rows['id'];?></td>
+                <td><?php echo $rows['name'];?></td>
+                <td><?php echo $rows['number'];?></td>
+                <td><?php echo $rows['operator'];?></td>
+                <td><?php echo $rows['circle'];?></td>
+                <td><?php echo $rows['plan'];?></td>
             </tr>
-            <tr>
-                <th scope="row">2</th>
-                <td>Cell</td>
-                <td>Cell</td>
-                <td>Cell</td>
-                <td>Cell</td>
-                <td>Cell</td>
-                <td>Cell</td>
-                <td>Cell</td>
-                <td>Cell</td>
-                <td>Cell</td>
-            </tr>
-            <tr>
-                <th scope="row">3</th>
-                <td>Cell</td>
-                <td>Cell</td>
-                <td>Cell</td>
-                <td>Cell</td>
-                <td>Cell</td>
-                <td>Cell</td>
-                <td>Cell</td>
-                <td>Cell</td>
-                <td>Cell</td>
-            </tr>
+            <?php 
+                } 
+            ?> 
             </tbody>
         </table>
         </div>

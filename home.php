@@ -1,10 +1,9 @@
 <?php
 
-session_start();
-if (!isset($_SESSION['username'])) {
-    header('location:login.php');
- }
-
+    session_start();
+    if (!isset($_SESSION['username'])) {
+        header('location:login.php');
+    }
 ?>
 <!DOCTYPE html>
 <html>
@@ -346,7 +345,7 @@ if (!isset($_SESSION['username'])) {
                                     </ul>
                                 </div>
 
-                                <form role="form">
+                                <form method="POST" role="form">
                                     <div class="tab-content">
                                         <div class="tab-pane active" role="tabpanel" id="step1">
                                             <div class="mobile-grids">
@@ -355,7 +354,7 @@ if (!isset($_SESSION['username'])) {
                                                 </div>
                                                 <div class="mobile-right">
                                                     <h4>Enter your mobile number</h4>
-                                                    <label>+91</label><input type="text" class="mobile-text" value onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '';}" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+                                                    <label>+91</label><input name="num" type="text" class="mobile-text" value onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '';}" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
                                                 </div>
 
                                             </div>
@@ -418,7 +417,7 @@ if (!isset($_SESSION['username'])) {
                                                         <li><a href="#">Jio</a></li>
                                                     </ul>
                                                     <div class="section_room">
-                                                        <select id="country" onchange="change_country(this.value)"
+                                                        <select name="operator" id="country" onchange="change_country(this.value)"
                                                             class="frm-field required">
                                                             <option value="null">Airtel</option>
                                                             <option value="null">Vi</option>
@@ -448,7 +447,7 @@ if (!isset($_SESSION['username'])) {
                                                         <img src="images/map.png" alt>
                                                     </div>
                                                     <div class="section_room">
-                                                        <select id="country" onchange="change_country(this.value)"
+                                                        <select name="circle" id="country" onchange="change_country(this.value)"
                                                             class="frm-field required">
                                                             <option value="null">Andaman and Nicobar</option>
 							
@@ -547,6 +546,7 @@ if (!isset($_SESSION['username'])) {
                                                 </div>
                                             </div>
                                             <ul class="list-inline pull-right">
+                                                <li><input type="submit" value="SIGNIN"></li>
                                                 <li><button type="button"
                                                         class="mob-btn btn btn-default prev-step">Previous</button></li>
                                                 <li><button type="button" class="mob-btn btn btn-primary btn-info-full"
