@@ -9,7 +9,7 @@
 <html>
 
 <head>
-    <title>Easy Recharge a Business Corporate Category Flat Bootstrap Responsive Website Template | Home :: w3layouts
+    <title>Easy Recharge : Home : User Panel
     </title>
 
     <link href="css/bootstrap.css" rel="stylesheet">
@@ -17,8 +17,6 @@
     <!-- for-mobile-apps -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="keywords" content="Easy Recharge Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
-	Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design">
     <script
         type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
     <!-- //for-mobile-apps -->
@@ -148,37 +146,13 @@
                     </script>
                     <!-- /script-for-menu -->
                 </div>
-                <!-- start search-->
-                <!-- <div class="search-box">
-					    <div id="sb-search" class="sb-search">
-							<form>
-								<input class="sb-search-input" placeholder="Enter your search item..." type="search" name="search" id="search">
-								<input class="sb-search-submit" type="submit" value>
-								<span class="sb-icon-search"> </span>
-							</form>
-						</div>
-				    </div>
-					
-					<script src="js/classie.js"></script>
-					<script src="js/uisearch.js"></script>
-						<script>
-							new UISearch( document.getElementById( 'sb-search' ) );
-						</script> -->
-
-
                 <div class="clearfix"> </div>
             </div>
             <div class="container">
                 <div class="banner-info">
-                    <h3>Get Free Coupons and Discounts on Top Brands With Every Recharge</h3>
+                    <h3>Communicate your tomorrow. <br> Get the recharge according to your need.</h3>
                 </div>
                 <div class="buttons">
-                    <!-- <ul>
-				<li><a class="hvr-shutter-in-vertical" href="#" data-toggle="modal" data-target="#myModal">Mobile</a></li>
-				<li><a class="hvr-shutter-in-vertical" href="#" data-toggle="modal" data-target="#myModal1">DTH</a></li>
-				<li><a class="hvr-shutter-in-vertical" href="#" data-toggle="modal" data-target="#myModal2">Datacard</a></li>
-			</ul> -->
-
                 </div>
             </div>
         </div>
@@ -192,13 +166,7 @@
                 </div>
                 <div class="col-md-4 btm-grid btm-wid">
                     <h3>SPECIAL RECHARGE OFFERS</h3>
-                    <p>Nemo enim ipsam voluptatem
-                        quia voluptas sit aspernatur
-                        aut odit aut fugit, sed quia conse
-                        magni dolores eos qui ratione. Nemo enim ipsam voluptatem
-                        quia voluptas sit aspernatur
-                        aut odit aut fugit, sed quia conse
-                        magni dolores eos qui ratione.</p>
+                    <p>Find the best Prepaid Recharge offers, coupons and deals on DesiDime. Get all verified Prepaid Recharge coupons and promo codes here. Get UPTO 100%</p>
                 </div>
                 <div class="col-md-4 btm-grid back-col2 text-center">
                     <img src="images/bbb1.png" alt>
@@ -244,11 +212,7 @@
             <div class="clearfix"></div>
             <div class="btm-pos">
                 <h3>Exclusive Offers</h3>
-                <p> Nam libero tempore, cum soluta
-                    nobis est eligendi optio cumque
-                    nihil impedit quo minus id quod
-                    maxime placeat facere possimus,
-                    omnis voluptas assumenda est. </p>
+                <p>EasyRecharge offers a great exclusive deal where you Recharge your prepaid mobile with anything above Rs 100. And you get a Rs 50 cashback instantly use code - "NEW50".</p>
             </div>
         </div>
         <div class="footer-top">
@@ -533,11 +497,6 @@
                         <div class="login-grids">
                             <div class="login">
                                 <div class="login-left">
-                                    <!-- <ul>
-											<li><a class="fb" href="#"><i></i>Sign in with Facebook</a></li>
-											<li><a class="goog" href="#"><i></i>Sign in with Google</a></li>
-											<li><a class="linkin" href="#"><i></i>Sign in with Linkedin</a></li>
-										</ul> -->
                                     <img src="images/login.png">
                                 </div>
                                 <div class="login-right">
@@ -572,11 +531,6 @@
                         <div class="login-grids">
                             <div class="login">
                                 <div class="login-left">
-                                    <!-- <ul>
-											<li><a class="fb" href="#"><i></i>Sign in with Facebook</a></li>
-											<li><a class="goog" href="#"><i></i>Sign in with Google</a></li>
-											<li><a class="linkin" href="#"><i></i>Sign in with Linkedin</a></li>
-										</ul> -->
                                     <img src="images/login.png">
                                 </div>
                                 <div class="login-right">
