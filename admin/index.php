@@ -127,10 +127,10 @@ $mysqli->close();
             <tr>
                 <th scope="col">id</th>
                 <th scope="col">Name</th>
+                <th scope="col">Username</th>
                 <th scope="col">Mobile Number</th>
                 <th scope="col">Operator</th>
                 <th scope="col">Circler</th>
-                <th scope="col">Plan</th>
             </tr>
             </thead>
             <tbody>
@@ -141,10 +141,10 @@ $mysqli->close();
             <tr>
                 <td><?php echo $rows['id'];?></td>
                 <td><?php echo $rows['name'];?></td>
-                <td><?php echo $rows['number'];?></td>
+                <td><?php echo $rows['username'];?></td>
+                <td><?php echo $rows['phone'];?></td>
                 <td><?php echo $rows['operator'];?></td>
                 <td><?php echo $rows['circle'];?></td>
-                <td><?php echo $rows['plan'];?></td>
             </tr>
             <?php 
                 } 
